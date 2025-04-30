@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sensor Data Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#data-visualization">Data Visualization</a></li>
+                <li><a href="#alert-configuration">Alert Configuration</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="graph-container">
+                <div>
+                    <h3>Temperature</h3>
+                    <canvas id="temperatureGraph"></canvas>
+                </div>
+                <div>
+                    <h3>pH</h3>
+                    <canvas id="phGraph"></canvas>
+                </div>
+                <div>
+                    <h3>Dissolved Oxygen</h3>
+                    <canvas id="oxygenGraph"></canvas>
+                </div>
+            </div>
+        </section>
+        <section id="data-visualization">
+            <h2>Data Visualization</h2>
+            <div class="pie-chart-container">
+                <div>
+                    <h3>Temperature</h3>
+                    <canvas id="temperaturePieChart"></canvas>
+                </div>
+                <div>
+                    <h3>pH</h3>
+                    <canvas id="phPieChart"></canvas>
+                </div>
+                <div>
+                    <h3>Dissolved Oxygen</h3>
+                    <canvas id="oxygenPieChart"></canvas>
+                </div>
+            </div>
+        </section>
+        <section id="data-table">
+            <h2>Sensor Data Table</h2>
+            <table id="sensorTable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Temperature (°C)</th>
+                        <th>pH</th>
+                        <th>Dissolved Oxygen (ppm)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section id="alert-configuration">
+            <h2>Alert Configuration</h2>
+            <form id="alertForm">
+                <label for="temperatureRange">Temperature Range (°C):</label>
+                <input type="text" id="temperatureRange" name="temperatureRange" value="24-28">
+                <label for="phRange">pH Range:</label>
+                <input type="text" id="phRange" name="phRange" value="6.5-7.5">
+                <label for="oxygenRange">Dissolved Oxygen Range (ppm):</label>
+                <input type="text" id="oxygenRange" name="oxygenRange" value="5-6">
+                <button type="submit">Save Configuration</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Sensor Data Dashboard</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
